@@ -8,6 +8,16 @@ The system analyzes historical accident records and estimates the severity level
 
 The project follows a complete Machine Learning lifecycle including data preprocessing, feature engineering, model training, evaluation, deployment, and real-time prediction through a Streamlit web application.
 
+## 🌟 Key Highlights
+
+- Built using 500,000 real-world accident records
+- Achieved 86.11% prediction accuracy
+- Engineered 39 predictive features
+- Trained using Random Forest Classifier
+- Developed an interactive Streamlit web application
+- Provides real-time accident severity prediction
+- Includes risk assessment and safety recommendations
+
 ---
 
 ## 🎯 Problem Statement
