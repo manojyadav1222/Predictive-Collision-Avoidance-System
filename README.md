@@ -214,15 +214,18 @@ streamlit run app/app.py
 
 ### Home Page
 
-Add screenshot here
+
+<img width="1280" height="716" alt="Home_Page" src="https://github.com/user-attachments/assets/42d82074-3eed-4bc7-8b34-92963b057928" />
 
 ### Prediction Results
 
-Add screenshot here
+<img width="2539" height="1409" alt="Prediction_results" src="https://github.com/user-attachments/assets/7700cad1-29ae-4304-9402-a4222272be74" />
+
 
 ### Project Statistics Sidebar
 
-Add screenshot here
+<img width="1280" height="721" alt="Project_Statistics_Sidebar" src="https://github.com/user-attachments/assets/1c7d9f5f-6eea-41db-82a8-5970402e98d5" />
+
 
 ---
 
