@@ -2,215 +2,269 @@
 
 ## 📌 Project Overview
 
-The **Predictive Collision Avoidance System** is a Machine Learning project designed to predict the probability of a vehicle collision based on driving conditions and environmental factors.
+The Predictive Collision Avoidance System is a Machine Learning-based application that predicts road accident severity using accident, weather, location, and traffic-related features.
 
-The objective is to analyze vehicle and road-related parameters to estimate collision risk before an accident occurs. This project is being developed in phases, beginning with an internship-level implementation and later evolving into a placement-ready intelligent collision avoidance system.
+The system analyzes historical accident records and estimates the severity level of a potential accident, helping drivers, transportation agencies, and traffic management systems identify high-risk situations and take preventive measures.
+
+The project follows a complete Machine Learning lifecycle including data preprocessing, feature engineering, model training, evaluation, deployment, and real-time prediction through a Streamlit web application.
 
 ---
 
 ## 🎯 Problem Statement
 
-Road accidents are one of the leading causes of injuries and fatalities worldwide. Many collisions occur because drivers receive insufficient warning before dangerous situations develop.
+Road accidents are one of the major causes of injuries and fatalities worldwide. Factors such as weather conditions, road infrastructure, visibility, traffic signals, and geographical location significantly influence accident severity.
 
-The goal of this project is to build a machine learning system capable of predicting collision risk using historical driving and environmental data, allowing early warning before a potential collision.
-
----
-
-## 🎯 Objectives
-
-* Build a complete end-to-end Machine Learning pipeline.
-* Perform data preprocessing and exploratory data analysis.
-* Engineer meaningful features from driving and environmental data.
-* Train and compare multiple Machine Learning models.
-* Predict collision probability.
-* Categorize predictions into Low, Medium, and High risk levels.
-* Build a scalable architecture that can be extended into a real-time collision avoidance system.
+The objective of this project is to develop a predictive system that can estimate accident severity based on various environmental and road-related conditions.
 
 ---
 
-## 🛠️ Tech Stack
+## 📊 Dataset Information
 
-### Programming Language
+**Dataset:** US Accidents Dataset
 
-* Python
+**Source:** Kaggle
 
-### Libraries
+**Original Dataset Size:** 7.7+ Million Records
 
-* NumPy
-* Pandas
-* Matplotlib
-* Scikit-learn
-* Joblib
-* Jupyter Notebook
+**Sample Used for Training:** 500,000 Records
 
-### Tools
+### Features Used
 
-* VS Code
-* Git
-* GitHub
+* Source
+* Start Latitude
+* Start Longitude
+* Distance
+* State
+* Timezone
+* Temperature
+* Wind Chill
+* Humidity
+* Pressure
+* Visibility
+* Wind Direction
+* Wind Speed
+* Precipitation
+* Weather Condition
+* Road Infrastructure Features
+* Time-based Features
+
+### Target Variable
+
+**Severity**
+
+| Severity | Description   |
+| -------- | ------------- |
+| 1        | Low Risk      |
+| 2        | Moderate Risk |
+| 3        | High Risk     |
+| 4        | Critical Risk |
+
+---
+
+## ⚙️ Project Workflow
+
+### 1. Data Understanding
+
+* Dataset exploration
+* Missing value analysis
+* Statistical analysis
+* Feature inspection
+
+### 2. Data Preprocessing
+
+* Handling missing values
+* Removing unnecessary columns
+* Data cleaning
+* Feature selection
+
+### 3. Feature Engineering
+
+* Hour extraction
+* Month extraction
+* Day of week extraction
+* Weekend identification
+* Day/Night identification
+* Rush hour detection
+* Accident duration calculation
+
+### 4. Encoding
+
+* Label Encoding of categorical variables
+
+### 5. Model Training
+
+* Random Forest Classifier
+
+### 6. Model Evaluation
+
+* Accuracy Score
+* Precision
+* Recall
+* F1 Score
+* Confusion Matrix
+
+### 7. Deployment
+
+* Streamlit Web Application
+
+---
+
+## 🤖 Machine Learning Model
+
+### Algorithm Used
+
+Random Forest Classifier
+
+### Model Performance
+
+| Metric       | Value             |
+| ------------ | ----------------- |
+| Accuracy     | 86.11%            |
+| Dataset Size | 500,000 Records   |
+| Features     | 39                |
+| Classes      | 4 Severity Levels |
+
+---
+
+## 📈 Important Features
+
+Top contributing features identified by the Random Forest model:
+
+1. Accident Duration Minutes
+2. Start Longitude
+3. Start Latitude
+4. Source
+5. Distance
+6. Year
+7. Pressure
+8. Humidity
+9. Temperature
+10. Hour
+
+---
+
+## 🖥️ Streamlit Application Features
+
+* Interactive User Interface
+* Real-time Severity Prediction
+* Risk Classification
+* Safety Recommendations
+* Project Statistics Sidebar
+* Dynamic User Inputs
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 Predictive-Collision-Avoidance-System/
 │
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── external/
+├── app/
+│   ├── app.py
+│   ├── predict.py
+│   └── utils.py
 │
 ├── notebooks/
-│
-├── src/
-│   ├── data/
-│   ├── features/
-│   ├── models/
-│   ├── visualization/
-│   └── utils/
+│   ├── 01_data_understanding.ipynb
+│   ├── 02_data_preprocessing.ipynb
+│   ├── 03_feature_engineering.ipynb
+│   ├── 04_model_training.ipynb
+│   └── 05_deployment.ipynb
 │
 ├── models/
 │
-├── outputs/
-│   ├── plots/
-│   ├── reports/
-│   └── predictions/
+├── data/
 │
-├── docs/
-│
-├── tests/
-│
-├── app/
-│
-├── requirements.txt
 ├── README.md
-├── .gitignore
-└── main.py
+├── requirements.txt
+└── .gitignore
 ```
 
 ---
 
-## 🏗️ System Architecture
+## 🚀 Installation
 
-```
-Vehicle & Environmental Data
-            │
-            ▼
-Data Collection
-            │
-            ▼
-Data Preprocessing
-            │
-            ▼
-Feature Engineering
-            │
-            ▼
-Machine Learning Model
-            │
-            ▼
-Collision Probability
-            │
-            ▼
-Risk Classification
-(Low / Medium / High)
+### Clone Repository
+
+```bash
+git clone https://github.com/manojyadav1222/Predictive-Collision-Avoidance-System.git
 ```
 
----
+### Move into Project Folder
 
-## 📊 Machine Learning Workflow
-
+```bash
+cd Predictive-Collision-Avoidance-System
 ```
-Problem Definition
-        │
-        ▼
-Dataset Selection
-        │
-        ▼
-Exploratory Data Analysis
-        │
-        ▼
-Data Cleaning
-        │
-        ▼
-Feature Engineering
-        │
-        ▼
-Model Training
-        │
-        ▼
-Model Evaluation
-        │
-        ▼
-Prediction Pipeline
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Streamlit Application
+
+```bash
+streamlit run app/app.py
 ```
 
 ---
 
-## 🤖 Planned Machine Learning Models
+## 📸 Application Screenshots
 
-* Logistic Regression
-* Decision Tree
-* Random Forest
-* XGBoost
+### Home Page
 
-The best-performing model will be selected based on multiple evaluation metrics.
+Add screenshot here
 
----
+### Prediction Results
 
-## 📈 Evaluation Metrics
+Add screenshot here
 
-* Accuracy
-* Precision
-* Recall
-* F1-Score
-* ROC-AUC
-* Confusion Matrix
+### Project Statistics Sidebar
+
+Add screenshot here
 
 ---
 
-## 🚀 Future Enhancements
+## 🛠️ Technologies Used
 
-* Streamlit or Flask Web Application
-* Real-time Collision Prediction
-* Sensor Data Integration
-* Camera-based Object Detection
-* Time-to-Collision Prediction
-* Autonomous Warning System
-* Model Deployment
-* Dashboard for Visualization
-
----
-
-## 📅 Development Roadmap
-
-* [x] Project Planning
-* [x] Project Initialization
-* [x] System Architecture Design
-* [ ] Dataset Selection
-* [ ] Exploratory Data Analysis
-* [ ] Data Preprocessing
-* [ ] Feature Engineering
-* [ ] Model Training
-* [ ] Model Evaluation
-* [ ] Prediction Pipeline
-* [ ] Documentation
-* [ ] Deployment
+* Python
+* Pandas
+* NumPy
+* Scikit-Learn
+* Joblib
+* Streamlit
+* Git
+* GitHub
 
 ---
 
-## 📌 Current Status
+## 🎓 Learning Outcomes
 
-**Phase:** Project Planning & Architecture
+Through this project, I gained practical experience in:
 
-The project structure has been created, Git has been initialized, and the overall system architecture has been finalized. The next phase is selecting an appropriate dataset and beginning exploratory data analysis (EDA).
+* Data Cleaning and Preprocessing
+* Feature Engineering
+* Machine Learning Model Development
+* Model Evaluation
+* Streamlit Deployment
+* Git Version Control
+* End-to-End ML Project Development
 
 ---
 
 ## 👨‍💻 Author
 
-**Manoj Kumar**
+**Manoj Yadav**
 
-B.Tech - Computer Science Engineering (AI & ML)
+B.Tech – Computer Science Engineering (AI & ML)
 
-Machine Learning Enthusiast | Python Developer | AI Learner
+Sri Venkateswara College of Engineering and Technology,Chittoor
+
+GitHub: https://github.com/manojyadav1222
+
+---
+
+## 📜 License
+
+This project is developed for educational and learning purposes.
