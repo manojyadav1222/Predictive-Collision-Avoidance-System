@@ -1,5 +1,5 @@
 # Models
-models/*.pkl
+models/random_forest_model.pkl
 
 # Dataset
 data/
