@@ -1,5 +1,13 @@
 # 🚗 Predictive Collision Avoidance System
 
+## 🌐 Live Demo
+
+🚀 [Launch Application](https://manojyadav1222-predictive-collision-avoidance-sys-appapp-ivvosi.streamlit.app/)
+
+## 📌 Project Overview
+
+The Predictive Collision Avoidance System is a Machine Learning-based application that predicts road accident severity using accident, weather, location, and traffic-related features.
+
 ## 📌 Project Overview
 
 The Predictive Collision Avoidance System is a Machine Learning-based application that predicts road accident severity using accident, weather, location, and traffic-related features.
